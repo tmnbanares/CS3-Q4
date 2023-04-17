@@ -15,7 +15,7 @@
 	</head>
 <body>
 
-		<p>[enter a number between 2 and 10]</p>
+	<p>[enter a number between 2 and 10]</p>
 
         <input type="number" id="column" />
         <label>by</label>
@@ -24,32 +24,34 @@
         <br><br>
         <button onclick="myFunction()">Click here when ready!</button>
 		
-		<br><br>
-		<div id="createtable"></div>
+	<br><br>
+	<div id="createtable"></div>
 		
 <script>
-		function myFunction() {   
-		var column = document.getElementById("column").value;
-		var row = document.getElementById("row").value;
+	function myFunction() {   
+	var column = document.getElementById("column").value;
+	var row = document.getElementById("row").value;
 
-		if (column<2 || column>10 || row<2 || row>10) {
-		alert("Please enter numbers between 2 and 10");
+	if (column<2 || column>10 || row<2 || row>10) {
+	alert("Please enter numbers between 2 and 10");
         document.getElementById("createtable").innerHTML = "";
         return 0;
-		}
+	}
 
-		var mtable = "<table>";
-		for (var i = 1; i <= column; i++) {
+	var mtable = "<table>";
+	for (var i = 1; i <= column; i++) {
         mtable += "<tr>";
         for (var j = 1; j <= row; j++) {
-          mtable += "<td>" + i*j + "</td>";
+        mtable += "<td>" + i*j + "</td>";
         }
+		
         mtable += "</tr>";
-		}
+		
+	}
 		
       mtable += "</table>";
       document.getElementById("createtable").innerHTML = mtable;
-    }
+        }
 
 </script>
 
